@@ -1,4 +1,4 @@
-Este es la primera version de practica en la cual realize esta tarjeta
+Este es la primera version de practica en la cual realice esta tarjeta
 
 URL. https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa
 
