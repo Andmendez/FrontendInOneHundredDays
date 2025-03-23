@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfume</title>
 
-
-    <link rel="stylesheet" href="css/styles.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <main class="container">
-        <div class="imageContainer">
-            <img id="responsiveImage" src="images/image-product-desktop.jpg" alt="Foto de locion">
-        </div>
+      <div class="imageContainer">
+        <img
+          id="responsiveImage"
+          src="images/image-product-desktop.jpg"
+          alt="Foto de locion"
+        />
+      </div>
 
-        <div class="detailContainer">
-            <h2>Perfume</h2>
-            <h1>Gabrielle Essence Eau De Parfumm</h1>
-            <p>A floral, solar and voluptuos interpretation composed by Olivier Polge, Perfumer-Creator for the House of <span>Chanel</span></p>
-            <div class="priceContainer">
-                <h3>$149.99</h3>
-                <h4 class="priceAfter">$169.99</h4>
-            </div>
-            <button class="btn">
-                <img src="images/icon-cart.svg" alt="Icono de carrito de compras">
-                <p>Add to Cart</p>
-            </button>
-            
+      <div class="detailContainer">
+        <h2>Perfume</h2>
+        <h1>Gabrielle Essence Eau De Parfumm</h1>
+        <p>
+          A floral, solar and voluptuos interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of <span>Chanel</span>
+        </p>
+        <div class="priceContainer">
+          <h3>$149.99</h3>
+          <h4 class="priceAfter">$169.99</h4>
         </div>
+        <button class="btn">
+          <img src="images/icon-cart.svg" alt="Icono de carrito de compras" />
+          <p>Add to Cart</p>
+        </button>
+      </div>
     </main>
     <script>
-        function cambiarImagen() {
-            let imagen = document.getElementById("responsiveImage");
-            let mediaQuery = window.matchMedia("(min-width: 768px)");
+      function cambiarImagen() {
+        let imagen = document.getElementById("responsiveImage");
+        let mediaQuery = window.matchMedia("(min-width: 768px)");
 
-            if (mediaQuery.matches) {
-                imagen.src = "images/image-product-desktop.jpg"; // Imagen para pantallas pequeñas
-            } else {
-                imagen.src = "images/image-product-mobile.jpg"; // Imagen para pantallas grandes
-            }
+        if (mediaQuery.matches) {
+          imagen.src = "images/image-product-desktop.jpg";
+        } else {
+          imagen.src = "images/image-product-mobile.jpg"; 
         }
+      }
 
-        // Ejecutar cuando cargue la página
-        cambiarImagen();
+      cambiarImagen();
 
-        // Detectar cambios en el tamaño de pantalla
-        window.addEventListener("resize", cambiarImagen);
+      window.addEventListener("resize", cambiarImagen);
     </script>
-</body>
+  </body>
 </html>
