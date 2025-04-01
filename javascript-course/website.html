@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <button
+      title="Okay"
+      class="h-10 bg-red-500 px-10 mt-5 ml-5 rounded-full 
+      hover:bg-blue-700 hover:animate-pulse uppercase text-white hover:scale-110
+      hover:shadow-lg hover:shadow-blue-500/50 active:bg-blue-800 active:scale-95"
+      onclick="suma()"
+    >
+      hello
+    </button>
+    <p>paragraph of text</p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+
+    <script>
+        function suma() {
+            let a = 7;
+            let b = 5;
+            console.log(a + b);
+        }
+    </script>
+  </body>
+</html>
