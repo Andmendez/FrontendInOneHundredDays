@@ -1,0 +1,32 @@
+button {
+  margin-top: 10px;
+  font-size: 20px;
+  padding: 10px;
+  margin-left: 10px;
+  width: 70px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #676464;
+  cursor: pointer;
+}
+.clear {
+  width: 325px;
+}
+h1 {
+  margin: 0;
+  margin-left: 40px;
+}
+.container {
+  border: 5px solid black;
+  border-radius: 10%;
+  background-color: bisque;
+  width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
