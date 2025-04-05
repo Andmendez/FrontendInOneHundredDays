@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #454545;
+      }
+
+      .button {
+        @apply bg-blue-700 py-2 px-4 text-white font-bold rounded ml-3 hover:animate-pulse hover:scale-105 hover:bg-blue-900 transition duration-700 ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="text-clifford my-5 text-2xl ml-3">Rock Paper Scissors</p>
+    <!--  -->
+    <button
+      class="button"
+      onclick="
+        myMove = 'rock';
+        
+        pickComputerMove()
+        resultGame(myMove, 'paper');     
+      "
+    >
+      Rock
+    </button>
+    <!--  -->
+    <button
+      class="button"
+      onclick="
+        myMove = 'paper';
+    
+        pickComputerMove()
+        resultGame(myMove, 'scissors');
+      "
+    >
+      Paper
+    </button>
+    <!--  -->
+    <button
+      class="button"
+      onclick="
+        myMove = 'scissors';
+
+        pickComputerMove()
+        resultGame(myMove, 'rock');
+      "
+    >
+      Scissors
+    </button>
+
+    <script>
+      let myMove = "";
+      let computerMoveString = "";
+
+      function pickComputerMove() {
+        const computerMove = Math.floor(Math.random() * 3);
+
+        if (computerMove === 0) {
+          computerMoveString = "rock";
+        } else if (computerMove === 1) {
+          computerMoveString = "paper";
+        } else {
+          computerMoveString = "scissors";
+        }
+        console.log(`Computer Move: ${computerMoveString}`);
+      }
+
+      function resultGame(playerMove, loseMove) {
+        let result = "";
+
+        if (computerMoveString === playerMove) {
+          result = "You Draw!";
+        } else if (computerMoveString === loseMove) {
+          result = "You Lose!";
+        } else {
+          result = "You Won!";
+        }
+        alert(
+          `You picked ${playerMove}. Computer picked ${computerMoveString}. ${result}.`
+        );
+      }
+    </script>
+  </body>
+</html>

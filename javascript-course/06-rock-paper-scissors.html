@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
+        myMove = 0;
+        computerMove = Math.floor(Math.random() * 3);
+        console.log(computerMove);
+      
+        if (computerMove === 2) {
+            computerMoveString = 'scissors';
+            result = 'You Won!'
+        } else if (computerMove === myMove) {
+            computerMoveString = 'rock';
+            result = 'You Draw!';
+        } 
+        else {
+            computerMoveString = 'paper';
+            result = 'You Lose!';
+        }
+        alert(`You picked rock. Computer picked ${computerMoveString}. ${result}.`)
+    "
+    >
+      Rock
+    </button>
+<!--  -->
+    <button
+      onclick="
+    myMove = 1;
+    computerMove = Math.floor(Math.random() * 3);
+    console.log(computerMove);
+ 
+    if (computerMove === 0) {
+        computerMoveString = 'rock';
+        result = 'You Won!'
+    } else if (computerMove === myMove) {
+        computerMoveString = 'paper';
+        result = 'You Draw!';
+    } 
+    else {
+        computerMoveString = 'scissors';
+        result = 'You Lose!';
+    }
+    alert(`You picked paper. Computer picked ${computerMoveString}. ${result}.`)
+"
+    >
+      Paper
+    </button>
+<!--  -->
+    <button
+      onclick="
+    myMove = 2;
+    computerMove = Math.floor(Math.random() * 3);
+    console.log(computerMove);
+
+    if (computerMove === 1) {
+        computerMoveString = 'paper';
+        result = 'You Won!'
+    } else if (computerMove === myMove) {
+        computerMoveString = 'scissors';
+        result = 'You Draw!';
+    } 
+    else {
+        computerMoveString = 'rock';
+        result = 'You Lose!';
+    }
+    alert(`You picked scissors. Computer picked ${computerMoveString}. ${result}.`)
+"
+    >
+      Scissors
+    </button>
+
+    <script>
+      let myMove = 0;
+      let computerMove = 0;
+      let result = "";
+      let computerMoveString = "";
+    </script>
+  </body>
+</html>

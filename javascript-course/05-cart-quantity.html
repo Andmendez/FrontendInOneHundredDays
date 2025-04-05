@@ -12,7 +12,7 @@
     </button>
     <button
       onclick="
-        cartQuantity ++;
+        cartQuantity < maxQuantity ? cartQuantity ++ : alert('The cart is full.');
         console.log(`Cart quantity: ${cartQuantity}`);"
     >
       Add to Cart
@@ -20,7 +20,7 @@
 
     <button
       onclick="
-    cartQuantity += 2;
+      cartQuantity < maxQuantity-1 ? cartQuantity += 2 : alert('The cart is full.');
     console.log(`Cart quantity: ${cartQuantity}`);"
     >
       +2
@@ -28,15 +28,16 @@
 
     <button
       onclick="
-    cartQuantity += 3;
-    console.log(`Cart quantity: ${cartQuantity}`);"
+      cartQuantity < maxQuantity-2 ? cartQuantity += 3 : alert('The cart is full.');
+
+      console.log(`Cart quantity: ${cartQuantity}`);"
     >
       +3
     </button>
 
     <button
         onclick="
-            cartQuantity += 4;
+            cartQuantity < maxQuantity-3 ? cartQuantity += 4 : alert('The cart is full.');
             console.log(`Cart quantity: ${cartQuantity}`);"
         >
         +4
@@ -44,7 +45,7 @@
 
     <button
         onclick="
-            cartQuantity += 5;
+            cartQuantity < maxQuantity ? cartQuantity += 5 : alert('The cart is full.');
             console.log(`Cart quantity: ${cartQuantity}`);"
         >
         +5
@@ -54,7 +55,7 @@
     
     <button
         onclick="
-            cartQuantity--;
+            cartQuantity > 0 ? cartQuantity-- : alert('Not enough items in the cart.');
             console.log(`Cart quantity: ${cartQuantity}`);"
     >
         -1
@@ -62,7 +63,7 @@
 
     <button
         onclick="
-            cartQuantity -= 2;
+            cartQuantity >= 2 ? cartQuantity -= 2 : alert('Not enough items in the cart.');
             console.log(`Cart quantity: ${cartQuantity}`);
         "
     >
@@ -71,7 +72,7 @@
 
     <button
         onclick = "
-            cartQuantity -= 5;
+            cartQuantity >= 5 ? cartQuantity -= 5 : alert('Not enough items in the cart.');
             console.log(`Cart quantity: ${cartQuantity}`);
         "
     >
@@ -81,6 +82,7 @@
     <button
       onclick="
     cartQuantity = 0;
+    console.clear();
     console.log('Cart was reset.');
     console.log(`Cart quantity: ${cartQuantity}`)"
     >
@@ -88,6 +90,7 @@
     </button>
     <script>
       let cartQuantity = 0;
+      const maxQuantity = 10;
     </script>
   </body>
 </html>
