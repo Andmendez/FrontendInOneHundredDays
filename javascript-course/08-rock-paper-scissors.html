@@ -59,18 +59,23 @@
       class="button"
       onclick="resetScore()"
     >
-
       Reset Score
     </button>
     <script>
       let myMove = "";
       let computerMoveString = "";
 
-      const score = {
+      const score = JSON.parse(localStorage.getItem('score')) || {
         Wins: 0,
         Losses: 0,
-        Draws: 0,
+        Draws: 0, 
       }
+
+
+
+      // const x = 5 < 4 || 'two'; // 5 > 4
+      // console.log(x);
+
 
       function pickComputerMove() {
         const computerMove = Math.floor(Math.random() * 3);
@@ -98,16 +103,27 @@
           result = "You Won!";
           score.Wins ++;
         }
+
+        localStorage.setItem('score', JSON.stringify(score));
+
         alert(
           `You picked ${playerMove}. Computer picked ${computerMoveString}. ${result}. \nWins: ${score.Wins}, Losses: ${score.Losses}, Draws: ${score.Draws}`
         );
       }
 
-      function resetScore() {
-        score.Draws = 0;
-        score.Wins = 0;
-        score.Losses = 0;
-      }
+      // function resetScore() {
+      //   score.Draws = 0;
+      //   score.Wins = 0;
+      //   score.Losses = 0;
+      //   localStorage.removeItem('score');
+      // }
+
+      // function resetScore() {
+      //   Object.assign(score, { Wins: 0, Losses: 0, Draws: 0 });
+      // }
+
+      const resetScore = () => Object.assign(score, { Wins: 0, Losses: 0, Draws: 0 });
+
     </script>
   </body>
 </html>

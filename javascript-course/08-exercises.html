@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 Exercises</title>
+</head>
+<body>
+    <script>
+
+        // 8a
+
+        const store = {
+            name: 'basketball',
+            price: 2095,
+        };
+        
+        console.log(store);
+
+        // 8b
+
+        // store.price = 5000;
+        // console.log(store);
+
+        // 8c
+
+        // store['delivery-time'] = '3 days';
+        // console.log(store)
+
+        // 8d, 8e
+
+        function comparePrice(one, two) {
+            if (one.price > two.price) {
+                return two.name;
+            } else {
+                return one.name;
+            }
+        }
+
+        function isSameProduct(one, two) {
+            if (one.name === two.name && one.price === two.price) {
+                return true;
+            } else {
+                return false;
+            }
+
+            // one.name === two.name && one.price === two.price ? console.log(true) : console.log(false);
+        }
+
+        const productOne = {
+            name: 'basketball',
+            price: 2095,
+        };
+
+        const productTwo = {
+            name: 'tenis',
+            price: 3070,
+        }
+
+        console.log(comparePrice(productOne, productTwo));
+
+        console.log(isSameProduct(productOne, productTwo));
+        // isSameProduct(productOne, productTwo);
+
+        // 8f
+
+        console.log('Good Morning'.toLowerCase());
+
+        // 8g
+
+        console.log('test'.repeat(2))
+
+    </script>
+</body>
+</html>

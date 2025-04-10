@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+    <style>
+        div {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="playGame('heads')">heads</button>
+        <button onclick="playGame('tails')">tails</button>
+    </div>
+    <script>
+        
+        let result = '';
+
+       
+
+        const score = JSON.parse(localStorage.getItem('game')) || {
+            wins: 0,
+            losses: 0
+        }
+
+        function playGame(move) {
+            const number = Math.random();
+            number < 0.5 ? result = 'heads' : result = 'tails';
+            console.log(`PC move: ${result}`);
+
+
+            result === move ? score.wins++ : score.losses++;
+
+            localStorage.setItem('game', JSON.stringify(score));
+            console.log(score)
+
+        }
+        
+       
+
+        
+    </script>
+</body>
+</html>
